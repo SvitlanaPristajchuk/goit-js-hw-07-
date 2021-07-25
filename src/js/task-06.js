@@ -8,18 +8,26 @@
 - Если введено подходящее количество, то `border` инпута становится зеленым,
   если неправильное - красным.
 
-Для добавления стилей, используй CSS-классы `valid` и `invalid`.
+Для добавления стилей, используй CSS-классы `valid` и `invalid`.*/
 
-```css
-#validation-input {
-  border: 3px solid #bdbdbd;
-}
 
-#validation-input.valid {
-  border-color: #4caf50;
-}
 
-#validation-input.invalid {
-  border-color: #f44336;
+  const inputRef = document.querySelector('#name-input');
+
+
+
+inputRef.addEventListener('input', onMouseEnter);
+inputRef.addEventListener('inputout', onMouseLeave);
+
+
+function onMouseEnter(event){
+  //console.log(event.currentTarget.value.length);
+const input = event.currentTarget;
+input.classList.add('#validation-input.valid ');
 }
-```*/
+function onMouseLeave(event) {
+  const input = event.currentTarget;
+  input.classList.add('#validation-input.invalid');
+}
+  //return refs.lengthLabel.textContent = event.currentTarget.value;
+
