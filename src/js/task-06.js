@@ -11,40 +11,39 @@
 Для добавления стилей, используй CSS-классы `valid` и `invalid`.*/
 
 
+/*const refs = {
+   input: document.querySelector('#validation-input'),
+  lengthLabel:  document.querySelector("data-length"),
 
-  /*const inputRef = document.querySelector('#name-input');
+}
+console.log(refs)
 
-
-
-inputRef.addEventListener('input', onMouseEnter);
-inputRef.addEventListener('inputout', onMouseLeave);
+refs.input.addEventListener('input', onMouseEnter);
+refs.input.addEventListener('inputout', onMouseLeave);
 
 
 function onMouseEnter(event){
   //console.log(event.currentTarget.value.length);
-const input = event.currentTarget;
-input.classList.add('#validation-input.valid ');
+  refs.input = event.currentTarget;
+refs.input.classList.add('#validation-input.valid ');
 }
 function onMouseLeave(event) {
-  const input = event.currentTarget;
-  input.classList.add('#validation-input.invalid');
-}*/
-  //return refs.lengthLabel.textContent = event.currentTarget.value;*/
+  refs.input = event.currentTarget;
+  refs.input.classList.add('#validation-input.invalid');
+}
+   refs.lengthLabel.textContent = event.currentTarget.value;*/
 
-
-    const inputEL = document.querySelector('.input');
-    console.log('inputEL', "inputEL");
-
-
-//const inputLength = inputEl.dataset.length;
-
-inputEl.addEventListener('change', el => {
-    const text = el.target.value;
-    if (text.length === +inputLength) {
-        inputEl.classList.add("valid");
-        inputEl.classList.remove("invalid");
-    } else {
-        inputEl.classList.remove("valid");
-        inputEl.classList.add("invalid"); 
-    }
-});
+   const inputEl = document.querySelector ("#validation-input");
+   const inputLength = inputEl.dataset.length;
+   
+   const input = document.querySelector('input');
+   inputEl.addEventListener('change', el => {
+       const text = el.target.value;
+       if (text.length === +inputLength) {
+           inputEl.classList.add("valid");
+       } else {
+           inputEl.classList.replace("valid", "invalid");
+         
+       }
+   });
+   
