@@ -12,7 +12,7 @@
 
 
 
-  const inputRef = document.querySelector('#name-input');
+  /*const inputRef = document.querySelector('#name-input');
 
 
 
@@ -28,6 +28,23 @@ input.classList.add('#validation-input.valid ');
 function onMouseLeave(event) {
   const input = event.currentTarget;
   input.classList.add('#validation-input.invalid');
-}
-  //return refs.lengthLabel.textContent = event.currentTarget.value;
+}*/
+  //return refs.lengthLabel.textContent = event.currentTarget.value;*/
 
+
+    const inputEL = document.querySelector('.input');
+    console.log('inputEL', "inputEL");
+
+
+//const inputLength = inputEl.dataset.length;
+
+inputEl.addEventListener('change', el => {
+    const text = el.target.value;
+    if (text.length === +inputLength) {
+        inputEl.classList.add("valid");
+        inputEl.classList.remove("invalid");
+    } else {
+        inputEl.classList.remove("valid");
+        inputEl.classList.add("invalid"); 
+    }
+});
