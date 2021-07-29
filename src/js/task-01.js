@@ -25,3 +25,5 @@ for (const category of totalCategories) {
   console.log(`Количество элементов: ${sumEl}`);
 };
 
+
+

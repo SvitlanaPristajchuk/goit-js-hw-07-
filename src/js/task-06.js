@@ -11,27 +11,6 @@
 Для добавления стилей, используй CSS-классы `valid` и `invalid`.*/
 
 
-/*const refs = {
-   input: document.querySelector('#validation-input'),
-  lengthLabel:  document.querySelector("data-length"),
-
-}
-console.log(refs)
-
-refs.input.addEventListener('input', onMouseEnter);
-refs.input.addEventListener('inputout', onMouseLeave);
-
-
-function onMouseEnter(event){
-  //console.log(event.currentTarget.value.length);
-  refs.input = event.currentTarget;
-refs.input.classList.add('#validation-input.valid ');
-}
-function onMouseLeave(event) {
-  refs.input = event.currentTarget;
-  refs.input.classList.add('#validation-input.invalid');
-}
-   refs.lengthLabel.textContent = event.currentTarget.value;*/
 
    const inputEl = document.querySelector ("#validation-input");
    const inputLength = inputEl.dataset.length;
